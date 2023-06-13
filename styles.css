@@ -1,105 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto&display=swap');
 
-    /* Color Variables */
-    :root {
-      --blue-1: #003366;
-      --blue-2: #005699;
-      --blue-3: #0077CC;
-      --blue-4: #3399FF;
-      --blue-5: #66CCFF;
-    }
-  
-    /* Common Styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-  
-    /* Navbar Styles */
-    .navbar {
-      background-color: var(--blue-1);
-      padding: 10px;
-      display: flex;
-      justify-content: flex-end;
-    }
-  
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      margin-right: 10px;
-    }
-  
-   
-    
-    
-    /* Hero Section Styles */
+/* --------------RESEt-------------- */
 
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid lime !important; */
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea {
+    font: inherit; 
+}
+
+
+/* -------------------NEW CODE */
+
+
+
+/* Color Variables */
+:root {
+    --blue-1: #003366;
+    --blue-2: #005699;
+    --blue-3: #0077CC;
+    --blue-4: #3399FF;
+    --blue-5: #66CCFF;
+}
+
+/* Common Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--blue-1);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+
+
+
+/* Hero Section Styles */
+
+.hero {
+    background-color: var(--blue-2);
+    background-image: url('Images/adrien-wodey-yjyWCNx0J1U-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-style: italic;
+    font-size: 4rem;
+    background-color: rgba(187, 176, 176, 0.6);
+    font-family: 'Indie Flower', cursive;
+    color: rgb(78, 67, 67);
+    margin: 0;
+    padding: 0.8rem;
+    border-radius: 1.5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    /* Tablet and Mobile */
     .hero {
-        background-color: var(--blue-2);
-        background-image: url('Images/adrien-wodey-yjyWCNx0J1U-unsplash.jpg');
-        background-size: cover;
-        background-position: center;
-        height: 90vh; 
-        padding: 50px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-  
-    .hero h1 {
-        background-color: rgb(187, 176, 176);
-      color: rgb(247, 219, 219);
-      margin: 0;
-      padding: 0.8rem; 
-      border-radius: 1.5rem;
+        height: 55vh;
     }
-  
-
-    @media screen and (max-width: 768px) {
-        /* Tablet and Mobile */
-        .hero {
-          height: 55vh;
-        }
-      }
+}
 
 
 
-    /* Info Cards Section Styles */
-    .info-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-  
-    .info-card {
-      background-color: var(--blue-3);
-      color: white;
-      padding: 20px;
-      width: 200px;
-      text-align: center;
-    }
-  
-    /* Testimonial Section Styles */
-    .testimonial {
-      background-color: var(--blue-4);
-      color: white;
-      padding: 50px;
-      text-align: center;
-    }
-  
-    .testimonial p {
-      font-style: italic;
-    }
-  
-    /* Footer Styles */
-    .footer {
-      background-color: var(--blue-5);
-      padding: 20px;
-      text-align: center;
-      color: rgb(206, 177, 177);
-    }
-  
+/* Info Cards Section Styles */
+.info-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.info-card {
+    background-color: var(--blue-3);
+    color: white;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+/* Testimonial Section Styles */
+.testimonial {
+    background-color: var(--blue-4);
+    color: white;
+    padding: 50px 50px 80px 50px;
+    text-align: center;
+    
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--blue-5);
+    padding: 20px;
+    text-align: center;
+    color: rgb(49, 40, 40);
+    width: 100%;
+    
+    bottom: 0;
+}
