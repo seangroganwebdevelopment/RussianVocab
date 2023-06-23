@@ -13,7 +13,7 @@
 
 img {
     display: block;
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
 }
 
@@ -69,23 +69,37 @@ body {
     background-image: url('Images/adrien-wodey-yjyWCNx0J1U-unsplash.jpg');
     background-size: cover;
     background-position: center;
+    isolation: isolate;
     height: 55vh;
     padding: 50px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
+
+.hero::after {
+    content: ''; 
+    position: absolute; 
+    background-size: cover;
+    background-position: center; 
+    z-index: -1; 
+    inset: 0; 
+    background-color: rgb(139, 139, 219);
+    opacity: 0.49; 
+}
+
+/* Thanks to Kevin Powell for the above! */
 
 .hero h1 {
     font-style: italic;
-    font-size: 4rem;
-    background-color: rgba(187, 176, 176, 0.6);
+    font-size: 3.5rem;
     font-family: 'Indie Flower', cursive;
-    color: rgb(78, 67, 67);
-    margin: 0;
-    padding: 0.8rem;
-    border-radius: 1.5rem;
+    color: rgb(235, 212, 212);
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.95);
+    font-weight: bold;
+   
 }
 
 
@@ -96,6 +110,10 @@ body {
     /* Tablet and Mobile */
     .hero {
         height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 5rem;
     }
 }
 
