@@ -69,7 +69,7 @@ body {
     background-image: url('Images/adrien-wodey-yjyWCNx0J1U-unsplash.jpg');
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 55vh;
     padding: 50px;
     text-align: center;
     display: flex;
@@ -89,14 +89,15 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 600px) {
 
     /* Tablet and Mobile */
     .hero {
-        height: 55vh;
+        height: 90vh;
     }
 }
-
 
 
 /* Info Cards Section Styles */
@@ -106,6 +107,7 @@ body {
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    background-color: var(--blue-2);
 }
 
 .info-card {
@@ -115,6 +117,8 @@ body {
     width: 200px;
     text-align: center;
 }
+
+
 
 /* Testimonial Section Styles */
 .testimonial {
