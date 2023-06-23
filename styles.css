@@ -20,7 +20,7 @@ img {
 input,
 button,
 textarea {
-    font: inherit; 
+    font: inherit;
 }
 
 
@@ -70,7 +70,7 @@ body {
     background-size: cover;
     background-position: center;
     isolation: isolate;
-    height: 55vh;
+    height: 65vh;
     padding: 50px;
     text-align: center;
     display: flex;
@@ -80,14 +80,14 @@ body {
 }
 
 .hero::after {
-    content: ''; 
-    position: absolute; 
+    content: '';
+    position: absolute;
     background-size: cover;
-    background-position: center; 
-    z-index: -1; 
-    inset: 0; 
+    background-position: center;
+    z-index: -1;
+    inset: 0;
     background-color: rgb(139, 139, 219);
-    opacity: 0.49; 
+    opacity: 0.49;
 }
 
 /* Thanks to Kevin Powell for the above! */
@@ -99,7 +99,7 @@ body {
     color: rgb(235, 212, 212);
     text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.95);
     font-weight: bold;
-   
+
 }
 
 
@@ -121,10 +121,12 @@ body {
 /* Info Cards Section Styles */
 .info-cards {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
     background-color: var(--blue-2);
 }
 
@@ -134,22 +136,65 @@ body {
     padding: 20px;
     width: 200px;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 3px 4px rgba(238, 237, 238, 0.2);
 }
 
+
+@media screen and (min-width: 768px){
+    .info-cards {
+        flex-direction: row; 
+        align-items: baseline;
+    }
+
+    .info-card {
+        min-height: 120px; 
+    }
+    
+}
 
 
 /* Testimonial Section Styles */
 .testimonial {
     background-color: var(--blue-4);
-    color: white;
-    padding: 50px 50px 80px 50px;
+    background-image: url('Images/background/pavel-neznanov-eKPUCe5Ztzo-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    isolation: isolate;
+    padding: 50px 50px 20px;
     text-align: center;
-    
+
+}
+
+.testimonial::after {
+    content: '';
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+
+    z-index: -1;
+    inset: 0;
+    background-color: rgb(194, 194, 233);
+    opacity: 0.68;
 }
 
 .testimonial p {
     font-style: italic;
+    padding-top: 10px;
 }
+
+.imgsmilingman {
+    width: 50%;
+
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    /* border-radius: 10%; */
+    box-shadow: 11px 23px 4px rgba(70, 16, 70, 0.2);
+}
+
+
+
 
 /* Footer Styles */
 .footer {
@@ -158,6 +203,6 @@ body {
     text-align: center;
     color: rgb(49, 40, 40);
     width: 100%;
-    
+
     bottom: 0;
 }
